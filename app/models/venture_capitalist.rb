@@ -39,11 +39,15 @@ class VentureCapitalist
     end
 
     def invested(domain_search)
-        funded_domain = funded.select{|funding|funding.startup.domain == domain_search}.sum(&:investment)
-        funded_domain
+        funded.select{|funding|funding.startup.domain == domain_search}.sum(&:investment)
     end
 
     def to_s
+        if self.name == "Russ Hanneman"
+            "#{@name} is worth $#{@total_worth}. This guy fucks."
+        else
+            "#{@name} is worth $#{@total_worth}."
+        end
         
     end
 

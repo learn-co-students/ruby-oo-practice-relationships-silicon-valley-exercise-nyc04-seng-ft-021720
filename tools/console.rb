@@ -16,6 +16,10 @@ piper.sign_contract(raviga, "Series B", 1500000)
 raviga.offer_contract(new_pied_piper, "Series A", 500000)
 p raviga.invested("Tech")
 
+puts piper
+puts raviga
+puts russ_h
+
 # This is a convenient place to define variables and/or set up new object instances,
 # so they will be available to test and play around with in your console
 

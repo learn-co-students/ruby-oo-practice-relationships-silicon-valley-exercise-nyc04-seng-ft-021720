@@ -48,6 +48,10 @@ class Startup
         investors.map{|investors|investors.venture_capitalist.name}.uniq
     end
 
+    def to_s
+        "#{@founder} is the founder of #{@name}, a #{@domain} company."
+    end
+
     def self.all
         @@all
     end
