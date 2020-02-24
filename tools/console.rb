@@ -14,7 +14,7 @@ raviga = VentureCapitalist.new("Raviga", 1500000000)
 piper.sign_contract(russ_h, "Series A", 1000000)
 piper.sign_contract(raviga, "Series B", 1500000)
 raviga.offer_contract(new_pied_piper, "Series A", 500000)
-p VentureCapitalist.tres_commas_club
+p raviga.invested("Tech")
 
 # This is a convenient place to define variables and/or set up new object instances,
 # so they will be available to test and play around with in your console

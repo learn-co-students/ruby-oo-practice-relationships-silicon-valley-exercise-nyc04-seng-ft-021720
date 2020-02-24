@@ -39,8 +39,8 @@ class VentureCapitalist
     end
 
     def invested(domain_search)
-        funded_domain = funded.select{|funding|funding.startup.domain == domain_search}
-        funded_domain.sum(&:investment)
+        funded_domain = funded.select{|funding|funding.startup.domain == domain_search}.sum(&:investment)
+        funded_domain
     end
 
     def to_s

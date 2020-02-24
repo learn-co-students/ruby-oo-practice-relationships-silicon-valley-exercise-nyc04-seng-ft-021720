@@ -52,5 +52,4 @@ class Startup
         @@all
     end
 
-
 end
