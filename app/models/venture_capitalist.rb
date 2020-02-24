@@ -48,7 +48,6 @@ class VentureCapitalist
         else
             "#{@name} is worth $#{@total_worth}."
         end
-        
     end
 
     def self.all
