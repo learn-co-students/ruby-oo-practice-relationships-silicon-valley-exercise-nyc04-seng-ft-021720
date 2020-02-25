@@ -37,4 +37,5 @@ class VentureCapitalist
     domains_by_investor = FundingRound.all.select{|round| round.startup.domain == domain_str && round.venture_capitalist == self}
     domains_by_investor.reduce(0){|sum, round| sum+round.investment }
   end
+  
 end 
