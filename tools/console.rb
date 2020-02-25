@@ -15,6 +15,8 @@ piper.sign_contract(russ_h, "Series A", 1000000)
 piper.sign_contract(raviga, "Series B", 1500000)
 raviga.offer_contract(new_pied_piper, "Series A", 500000)
 p raviga.invested("Tech")
+p piper.investors
+
 
 puts piper
 puts raviga

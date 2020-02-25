@@ -36,16 +36,22 @@ class Startup
         investors.length
     end
 
-    def investors
+    def invested
         FundingRound.all.select{|funding|funding.startup == self}
     end
 
+    def investors
+        invested = FundingRound.all.select{|funding|funding.startup == self}
+        invested.map{|investors|investors.venture_capitalist.name}
+    end
+
     def total_funds
-        investors.sum(&:investment)
+        invested.sum(&:investment)
     end
 
     def big_investors
-        investors.map{|investors|investors.venture_capitalist.name}.uniq
+        big = invested.select{|investors|investors.venture_capitalist.total_worth > 1000000000}
+        big.map{|investors|investors.venture_capitalist.name}
     end
 
     def to_s
