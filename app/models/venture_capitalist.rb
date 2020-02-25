@@ -32,12 +32,12 @@ class VentureCapitalist
 
     # Returns a **unique** list of all startups this venture capitalist has funded
     def portfolio
-        self.funding_rounds.select {|fundinground| fundinground.startup}.uniq
+        funding_rounds.select {|fundinground| fundinground.startup}.uniq
     end
 
     # returns the largest funding round given by this venture capitalist
     def biggest_investment
-        self.funding_rounds.max {|fundinground| fundinground.investment}
+        funding_rounds.max {|fundinground| fundinground.investment}
     end
 
     # given a **domain string**, returns the total amount invested in that domain

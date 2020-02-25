@@ -76,7 +76,7 @@ class Startup
     # and are in the Trés Commas club
     def big_investors
         tres_commas = VentureCapitalist.tres_commas_club
-        self.investors.select {|vc| vc && tres_commas.include?(vc)}
+        investors.select {|vc| tres_commas.include?(vc)}
     end
 
 end
