@@ -32,8 +32,7 @@ class VentureCapitalist
 
     # Returns a **unique** list of all startups this venture capitalist has funded
     def portfolio
-        startups = self.funding_rounds.select {|fundinground| fundinground.startup}
-        startups.uniq
+        self.funding_rounds.select {|fundinground| fundinground.startup}.uniq
     end
 
     # returns the largest funding round given by this venture capitalist
@@ -44,8 +43,7 @@ class VentureCapitalist
     # given a **domain string**, returns the total amount invested in that domain
     def invested(domain)
         domain_type = self.funding_rounds.select {|fundinground| fundinground.startup.domain == domain}
-        domain_investments = domain_type.map {|fundinground| fundinground.investment}
-        domain_investments.reduce(:+)
+        domain_type.map {|fundinground| fundinground.investment}.sum
     end
 
 end

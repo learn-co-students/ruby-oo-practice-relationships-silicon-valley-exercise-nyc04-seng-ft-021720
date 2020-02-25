@@ -24,6 +24,7 @@ monopoly = VentureCapitalist.new("Monopoloy Investments", 2_000_000_000)
 
 gen_cat.offer_contract(etsy, "Series A", 1_000_000.00)
 sequoia.offer_contract(etsy, "Series B", 2_000_000.00)
+monopoly.offer_contract(etsy, "Series B", 3_500_000.00)
 gen_cat.offer_contract(glossier, "Series B", 3_000_000.00)
 gen_cat.offer_contract(betterment, "Series C", 10_000_000.00)
 

@@ -63,15 +63,13 @@ class Startup
     # Returns the total sum of investments that the startup has gotten
     def total_funds
         startup_instances = FundingRound.all.select {|fundinground| fundinground.startup == self}
-        startup_investments = startup_instances.map {|fundinground| fundinground.investment}
-        startup_investments.reduce(:+)
+        startup_instances.map {|fundinground| fundinground.investment}.sum
     end
 
     # Returns a **unique** array of all the venture capitalists that have invested in this company
     def investors
         startup_instances = FundingRound.all.select {|fundinground| fundinground.startup == self}
-        startup_investors = startup_instances.map {|fundinground| fundinground.venture_capitalist}
-        startup_investors.uniq
+        startup_instances.map {|fundinground| fundinground.venture_capitalist}.uniq
     end
 
     # Returns a **unique** array of all the venture capitalists that have invested in this company 
